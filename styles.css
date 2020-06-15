@@ -1,0 +1,9 @@
+body {
+  background-color: brown;
+}
+
+.card {
+  border: 1px solid;
+  height: 100px;
+  width: 100px;
+}
