@@ -1,9 +1,15 @@
 body {
-  background-color: brown;
+  background-color: #fff;
 }
 
-.card {
+img {
   border: 1px solid;
-  height: 100px;
-  width: 100px;
+  border-radius: 5%;
+  height: 9rem;
+  width: 9rem;
+}
+
+footer {
+  text-align: center;
+  color: grey;
 }
