@@ -1,6 +1,7 @@
-var cardArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+var cardArray = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 var cardStatus = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var openCards = 0;
+var cardStac = [];
 
 cardArray = shuffle(cardArray);
 
@@ -29,6 +30,7 @@ function turnCard(cardNumber) {
     if (cardStatus[cardNumber] === 0) {
       document.querySelectorAll("img")[cardNumber].setAttribute("src", "images/pic" + cardArray[cardNumber] + ".png");
       cardStatus[cardNumber] = 1;
+
     } else {
       document.querySelectorAll("img")[cardNumber].setAttribute("src", "images/rückseite.jpg");
       cardStatus[cardNumber] = 0;
@@ -40,7 +42,7 @@ function turnCard(cardNumber) {
 }
 
 function resetCard() {
-  for (i = 0; i <= cardArray.length; i++) {
+  for (i = 0; i <= cardArray.length-1 ; i++) {
     document.querySelectorAll("img")[i].setAttribute("src", "images/rückseite.jpg");
   }
 }
